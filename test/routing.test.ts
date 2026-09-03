@@ -29,11 +29,14 @@ test("uses broad intent routing when no catalogue trigger matches", () => {
 	assert.deepEqual(executableRoutes(matchingRoutes("为什么这里不工作", ["diagnosing-bugs"])).map((route) => route.id), ["diagnosing-bugs"]);
 });
 
-test("defaults to engineering only and allows an explicit productivity category", () => {
-	assert.equal(executableRoutes(matchingRoutes("请 grill 我的方案", ["grilling"])).length, 0);
+test("defaults to all categories enabled and allows narrowing via enabledCategories", () => {
 	assert.deepEqual(
-		executableRoutes(matchingRoutes("请 grill 我的方案", ["grilling"], { enabledCategories: ["engineering", "productivity"] })).map((route) => route.id),
+		executableRoutes(matchingRoutes("请 grill 我的方案", ["grilling"])).map((route) => route.id),
 		["grilling"],
+	);
+	assert.deepEqual(
+		executableRoutes(matchingRoutes("请 grill 我的方案", ["grilling"], { enabledCategories: ["engineering"] })).map((route) => route.id),
+		[],
 	);
 });
 

@@ -67,7 +67,7 @@ Project values override global values; `disabledSkills` accumulates.
 }
 ```
 
-Defaults enable only the `engineering` category. `productivity`, `writing`, and `adapted` are opt-in; `unsupported` entries are never automatically selected.
+By default all four categories (`engineering`, `productivity`, `writing`, `adapted`) are enabled. `unsupported` entries are never automatically selected regardless of category settings.
 
 ## Catalogue updates
 

@@ -15,7 +15,7 @@ export type RouteMatch = RouteDefinition & {
 	enabled: boolean;
 };
 
-const defaultCategories: RouteCategory[] = ["engineering"];
+const defaultCategories: RouteCategory[] = ["engineering", "productivity", "writing", "adapted"];
 const phaseOrder = ["diagnosis", "discovery", "synthesis", "implementation", "current", "standalone"];
 
 const broadIntentRules: Array<{ routeIds: string[]; patterns: RegExp[] }> = [

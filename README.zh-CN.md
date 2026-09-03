@@ -67,7 +67,7 @@ Matt Pocock Skills 需要单独安装；Pi 必须能从其配置的 Skill 路径
 }
 ```
 
-默认只启用 `engineering` 类别。`productivity`、`writing`、`adapted` 为可选启用；`unsupported` 条目永远不会被自动选中。
+默认启用全部四个类别（`engineering`、`productivity`、`writing`、`adapted`）。无论类别设置如何，`unsupported` 条目永远不会被自动选中。
 
 ## 目录更新
 
