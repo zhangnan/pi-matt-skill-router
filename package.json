@@ -1,6 +1,6 @@
 {
   "name": "@zhangnan555/pi-matt-skill-router",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Pi extension that routes requests to installed Matt Pocock Skills.",
   "type": "module",
   "license": "MIT",
@@ -12,10 +12,24 @@
     "url": "https://github.com/zhangnan/pi-matt-skill-router/issues"
   },
   "homepage": "https://github.com/zhangnan/pi-matt-skill-router#readme",
-  "keywords": ["pi-package", "pi-extension", "skills", "engineering-workflow"],
-  "files": ["extensions", "src", "scripts", "README.md", "README.zh-CN.md", "LICENSE"],
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "skills",
+    "engineering-workflow"
+  ],
+  "files": [
+    "extensions",
+    "src",
+    "scripts",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
   "pi": {
-    "extensions": ["./extensions"]
+    "extensions": [
+      "./extensions"
+    ]
   },
   "peerDependencies": {
     "@earendil-works/pi-coding-agent": "*"
