@@ -1,4 +1,4 @@
-# @moo/pi-matt-skill-router
+# @zhangnan555/pi-matt-skill-router
 
 > **English**: [README.md](./README.md)
 
@@ -17,10 +17,10 @@
 
 ```bash
 # 全局
-pi install npm:@moo/pi-matt-skill-router
+pi install npm:@zhangnan555/pi-matt-skill-router
 
 # 项目本地
-pi install -l npm:@moo/pi-matt-skill-router
+pi install -l npm:@zhangnan555/pi-matt-skill-router
 ```
 
 从本仓库开发安装：

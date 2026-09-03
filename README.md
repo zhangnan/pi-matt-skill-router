@@ -1,4 +1,4 @@
-# @moo/pi-matt-skill-router
+# @zhangnan555/pi-matt-skill-router
 
 > **简体中文**: [README.zh-CN.md](./README.zh-CN.md)
 
@@ -17,10 +17,10 @@ A [Pi](https://pi.dev) extension that routes a request to the appropriate instal
 
 ```bash
 # Global
-pi install npm:@moo/pi-matt-skill-router
+pi install npm:@zhangnan555/pi-matt-skill-router
 
 # Project-local
-pi install -l npm:@moo/pi-matt-skill-router
+pi install -l npm:@zhangnan555/pi-matt-skill-router
 ```
 
 For development from this checkout:
