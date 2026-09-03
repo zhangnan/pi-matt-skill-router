@@ -57,6 +57,10 @@ test("folds removed website entries into real skills where safe", () => {
 	assert.deepEqual(executableRoutes(matchingRoutes("design an interface", ["codebase-design"])).map((route) => route.id), ["codebase-design"]);
 });
 
+test("routes architecture maintenance and global wording to domain modeling", () => {
+	assert.deepEqual(executableRoutes(matchingRoutes("维护全局架构术语", ["domain-modeling"])).map((route) => route.id), ["domain-modeling"]);
+});
+
 test("does not route generic project planning to wayfinder unless the task is large or path-unclear", () => {
 	assert.deepEqual(executableRoutes(matchingRoutes("帮我梳理这个方案", ["grill-with-docs"])).map((route) => route.id), ["grill-with-docs"]);
 	assert.deepEqual(executableRoutes(matchingRoutes("帮我规划大型迁移项目路线图", ["wayfinder"])).map((route) => route.id), ["wayfinder"]);
