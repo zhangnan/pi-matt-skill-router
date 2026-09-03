@@ -26,6 +26,7 @@ A small example: you type “this endpoint keeps throwing errors.” The extensi
 - **No memorising.** You don't need to know 30+ skill names or type `/skill:` by hand — describing the task in plain words routes you to the right workflow.
 - **No copying or impersonation.** The extension never duplicates a SKILL.md body, so the real skills stay a single source of truth and cannot drift out of sync.
 - **Honest, and respects you.** It steps aside when you explicitly run `/skill:name`; if a matching skill isn't installed it says so instead of pretending it ran.
+- **Zero overhead when unmatched.** When no skill matches, nothing is injected into the system prompt — no extra tokens, no noise on every single request. The routing hint is added only when a skill actually matches.
 - **Configurable.** Toggle whole categories on/off, disable individual skills, or add your own trigger phrases.
 
 ## Install
