@@ -26,7 +26,7 @@ A small example: you type “this endpoint keeps throwing errors.” The extensi
 - **No memorising.** You don't need to know 30+ skill names or type `/skill:` by hand — describing the task in plain words routes you to the right workflow.
 - **No copying or impersonation.** The extension never duplicates a SKILL.md body, so the real skills stay a single source of truth and cannot drift out of sync.
 - **Honest, and respects you.** It steps aside when you explicitly run `/skill:name`; if a matching skill isn't installed it says so instead of pretending it ran.
-- **Zero overhead when unmatched.** When no skill matches, nothing is injected into the system prompt — no extra tokens, no noise on every single request. The routing hint is added only when a skill actually matches.
+- **Zero overhead when unmatched; only a short hint when matched.** When no skill matches, nothing is injected into the system prompt — no extra tokens, no noise on every single request. When one does match, only a short routing hint is added (skill name + reason), and the agent is told to `read` the real SKILL.md rather than pasting its body into the prompt. This contrasts with always-on workflow-harness extensions that inject guidance into the system prompt on every turn whether or not the request needs it.
 - **Configurable.** Toggle whole categories on/off, disable individual skills, or add your own trigger phrases.
 
 ## Install
