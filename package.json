@@ -1,6 +1,6 @@
 {
   "name": "@zhangnan555/pi-matt-skill-router",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A Pi extension that routes requests to installed Matt Pocock Skills.",
   "type": "module",
   "license": "MIT",
