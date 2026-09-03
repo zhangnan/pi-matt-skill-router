@@ -1,5 +1,7 @@
 # @moo/pi-matt-skill-router
 
+> **简体中文**: [README.zh-CN.md](./README.zh-CN.md)
+
 A [Pi](https://pi.dev) extension that routes a request to the appropriate installed [Matt Pocock Skills](https://www.skills.sh/mattpocock/skills). It does not copy, install, or impersonate a Skill. It tells the agent to read the actual `SKILL.md` before working.
 
 ## What it does
