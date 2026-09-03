@@ -13,6 +13,21 @@ A [Pi](https://pi.dev) extension that routes a request to the appropriate instal
 - Labels host-specific workflows as `native`, `Pi-adapted`, or `unsupported in Pi`.
 - Shows the selected route in the Pi TUI status line. Run `/matt-route <task>` for its reason, phase, compatibility, configuration state, and availability.
 
+## How it works
+
+A small example: you type “this endpoint keeps throwing errors.” The extension recognises that as a `diagnosing-bugs` task, so before the agent starts it quietly adds one reminder: “load the `diagnosing-bugs` SKILL.md and follow its diagnosis loop.”
+
+1. Ship a small catalogue — each Matt Pocock skill maps to a set of high-confidence trigger phrases (e.g. `debug`, `regression`, `报错`, `回归` → `diagnosing-bugs`).
+2. On every turn, compare your input against those triggers; when something matches, order the hits by phase: diagnosis → discovery → synthesis → implementation.
+3. Only route to skills that are actually installed: append “load this SKILL.md and follow it” to the turn's system prompt, and show the route in the status bar.
+
+## Why this design
+
+- **No memorising.** You don't need to know 30+ skill names or type `/skill:` by hand — describing the task in plain words routes you to the right workflow.
+- **No copying or impersonation.** The extension never duplicates a SKILL.md body, so the real skills stay a single source of truth and cannot drift out of sync.
+- **Honest, and respects you.** It steps aside when you explicitly run `/skill:name`; if a matching skill isn't installed it says so instead of pretending it ran.
+- **Configurable.** Toggle whole categories on/off, disable individual skills, or add your own trigger phrases.
+
 ## Install
 
 ```bash
